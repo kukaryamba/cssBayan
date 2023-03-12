@@ -1,0 +1,26 @@
+
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+.item {
+  border-top: 1px solid lightgray;
+  font-size: 36px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 300px;
+  align-self: center;
+}
