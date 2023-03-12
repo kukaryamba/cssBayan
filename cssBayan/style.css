@@ -1,8 +1,7 @@
-
 .container {
   margin: 0 auto;
   width: 1000px;
- 
+
 
 }
 
@@ -10,7 +9,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  
+
 }
 
 h1 {
@@ -33,19 +32,35 @@ img {
   display: none;
 }
 
-.icon {
+/* .icon {
   display: none;
   position: absolute;
   right: 0;
-}
+} */
 
 
 .bayan:hover {
   cursor: pointer;
   color: brown;
 }
-.bayan:hover .icon {
-  display: block;
+
+.fa-plus, .fa-times {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.bayan:hover .fa-plus {
+   visibility: visible;
+}
+
+
+.item:hover .fa-plus {
+  visibility: hidden;
+}
+
+.item:hover .fa-times {
+   visibility: visible;
 }
 
 .item:hover img {
