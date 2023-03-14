@@ -1,4 +1,6 @@
-
+* {
+  background-color: #cfb585;
+}
 
 ul {
   margin: 0;
@@ -92,6 +94,7 @@ input:checked + .picture {
   }
   .icon {
     width: 1.3rem;
+    display: block;
   }
 }
 
@@ -141,3 +144,15 @@ input:checked + .picture {
     width: 2rem;
   }
 } 
+
+@media (hover: none) {
+  .icon {
+    display: block;
+  }
+}
+
+@media (hover: hover) {
+  .icon {
+    display: none;
+  }
+}
