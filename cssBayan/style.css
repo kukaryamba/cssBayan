@@ -1,68 +1,97 @@
 .container {
   margin: 0 auto;
-  width: 1000px;
-
-
+  width: 50vw;
 }
 
 .bayan {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-
 }
+
 
 h1 {
   font-size: 52px;
 }
 
 .item {
+  width: 50vw;
   border-top: 1px solid lightgray;
   font-size: 36px;
+  min-height: 3vw;
   font-weight: bolder;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
-img {
-  width: 300px;
+.item_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.icon {
+  width: 2rem;
+  display: none;
+  transition: all 0.3s;
+
+}
+
+.item:hover .icon{
+  transform: rotate(45deg);
+}
+
+.picture {
+  width: 30vw;
   align-self: center;
   display: none;
 }
 
-/* .icon {
-  display: none;
-  position: absolute;
-  right: 0;
-} */
 
+input {
+  display: none;
+}
 
 .bayan:hover {
   cursor: pointer;
-  color: brown;
+  color: rgb(121, 61, 12);
 }
+
+.item:hover .picture {
+  display: block;
+}
+
+
+.bayan:hover .icon {
+  display: block;
+}
+
+
+#bayan input[type="radio"]:checked + .picture {
+  display: block;
+}
+
+
+/* 
+
 
 .fa-plus, .fa-times {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
+  display: none;
 }
 
-.bayan:hover .fa-plus {
-   visibility: visible;
-}
 
 
 .item:hover .fa-plus {
-  visibility: hidden;
+  display: none;
 }
 
 .item:hover .fa-times {
-   visibility: visible;
+   display: block;
 }
 
-.item:hover img {
+
+
+.item:active img {
   display: block;
-}
+} */
