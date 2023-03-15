@@ -18,11 +18,12 @@ ul {
 }
 
 .picture {
-  width: 30vw;
   margin: 1vw auto;
   align-self: center;
-  display: none;
-  
+  display: block;
+  height: 0;
+  transform: scale(0);
+  transition: all 0.6s;
 }
 
 label {
@@ -59,18 +60,18 @@ input {
 }
 
 .item:hover .picture {
-  display: block;
+  transform: scale(1);
 }
 
+input:checked + .picture {
+  transform: scale(1);
+}
 
 .bayan:hover .icon {
   display: block;
 }
 
 
-input:checked + .picture {
-  display: block;
-}
 
 @media (min-width: 300px) {
   .container {
@@ -89,9 +90,16 @@ input:checked + .picture {
     padding: 2vw 0;
   }
 
-  .picture {
-    width: 90vw;
+  .item:hover .picture {
+    width: 20vh;
+    height: 20vh;
   }
+  
+  input:checked + .picture {
+    width: 20vh;
+    height: 20vh;
+  }
+
   .icon {
     width: 1.3rem;
     display: block;
@@ -113,9 +121,16 @@ input:checked + .picture {
     font-size: 2rem;
   }
 
-  .picture {
-    width: 60vw;
+  .item:hover .picture {
+    width: 30vh;
+    height: 30vh;
   }
+  
+  input:checked + .picture {
+    width: 30vh;
+    height: 30vh;
+  }
+
   .icon {
     width: 2rem;
   }
@@ -131,15 +146,21 @@ input:checked + .picture {
     font-size: 3rem;
   }
   
+  .item:hover .picture {
+    width: 50vh;
+    height: 50vh;
+  }
+  
+  input:checked + .picture {
+    width: 50vh;
+    height: 50vh;
+  }
   
   .item {
     width: 50vw;
     font-size: 2rem;
   }
 
-  .picture {
-    width: 30vw;
-  }
   .icon {
     width: 2rem;
   }
