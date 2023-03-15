@@ -1,15 +1,19 @@
 * {
-  background-color: #cfb585;
+  background-color: #f8edd9;
 }
 
-ul {
+body, ul, li {
   margin: 0;
   padding: 0;
+}
+h1 {
+  color:rgb(73, 107, 4);
+  margin: 0 0 0.5rem;
 }
 
 .item {
   width: 50vw;
-  border-top: 1px solid lightgray;
+  border-top: 2px solid lightgray;
   font-size: 2rem;
   font-weight: bolder;
   display: flex;
@@ -18,12 +22,14 @@ ul {
 }
 
 .picture {
-  margin: 1vw auto;
+  margin: -0.5% auto 1%;
   align-self: center;
   display: block;
   height: 0;
   transform: scale(0);
   transition: all 0.6s;
+  border-radius: 5%;
+  border: 1px solid rgb(73, 107, 4);
 }
 
 label {
@@ -38,7 +44,7 @@ label {
 
 .icon {
   width: 2rem;
-  display: none;
+  visibility: hidden;
   transition: all 0.3s;
 }
 
@@ -68,10 +74,8 @@ input:checked + .picture {
 }
 
 .bayan:hover .icon {
-  display: block;
+  visibility: visible;
 }
-
-
 
 @media (min-width: 300px) {
   .container {
@@ -91,25 +95,27 @@ input:checked + .picture {
   }
 
   .item:hover .picture {
-    width: 20vh;
-    height: 20vh;
+    width: 45vh;
+    height: 45vh;
   }
   
   input:checked + .picture {
-    width: 20vh;
-    height: 20vh;
+    width: 45vh;
+    height: 45vh;
   }
 
+  .picture {
+    margin-top: 1%;
+  }
   .icon {
     width: 1.3rem;
-    display: block;
   }
 }
 
  @media (min-width: 460px) {
   .container {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
   }
   
   h1 {
@@ -119,6 +125,7 @@ input:checked + .picture {
   .item {
     width: 100%;
     font-size: 2rem;
+    padding: 0;
   }
 
   .item:hover .picture {
@@ -132,6 +139,7 @@ input:checked + .picture {
   }
 
   .icon {
+    margin-top: 0.4rem;
     width: 2rem;
   }
 }  
@@ -143,7 +151,7 @@ input:checked + .picture {
   }
   
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .item:hover .picture {
@@ -158,7 +166,8 @@ input:checked + .picture {
   
   .item {
     width: 50vw;
-    font-size: 2rem;
+    min-height: 2vh;
+    font-size: 1.5rem;
   }
 
   .icon {
@@ -168,12 +177,12 @@ input:checked + .picture {
 
 @media (hover: none) {
   .icon {
-    display: block;
+    visibility: visible;
   }
 }
 
 @media (hover: hover) {
   .icon {
-    display: none;
+    visibility: hidden;
   }
 }
