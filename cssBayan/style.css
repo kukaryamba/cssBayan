@@ -48,8 +48,9 @@ label {
   transition: all 0.3s;
 }
 
-input:checked + .icon {
+input:checked ~ .item_header > .icon {
   transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .item:hover .icon{
@@ -69,7 +70,7 @@ input {
   transform: scale(1);
 }
 
-input:checked + .picture {
+input:checked ~ .picture {
   transform: scale(1);
 }
 
@@ -96,12 +97,13 @@ input:checked + .picture {
 
   .item:hover .picture {
     width: 45vh;
-    height: 45vh;
+    height: 45vh; 
+
   }
   
-  input:checked + .picture {
+  input:checked ~ .picture {
     width: 45vh;
-    height: 45vh;
+    height: 45vh; 
   }
 
   .picture {
@@ -133,7 +135,7 @@ input:checked + .picture {
     height: 30vh;
   }
   
-  input:checked + .picture {
+  input:checked ~ .picture {
     width: 30vh;
     height: 30vh;
   }
@@ -159,7 +161,7 @@ input:checked + .picture {
     height: 50vh;
   }
   
-  input:checked + .picture {
+  input:checked ~ .picture {
     width: 50vh;
     height: 50vh;
   }
