@@ -1,5 +1,6 @@
 * {
   background-color: #f8edd9;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body, ul, li {
@@ -186,6 +187,11 @@ input:checked ~ .picture {
   .icon {
     visibility: visible;
   }
+  
+  .bayan:hover {
+    color: black;
+  }
+
 }
 
 @media (hover: hover) {
